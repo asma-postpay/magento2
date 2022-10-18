@@ -1,1 +1,1 @@
-# magento2
+# Postpay magento2 module
