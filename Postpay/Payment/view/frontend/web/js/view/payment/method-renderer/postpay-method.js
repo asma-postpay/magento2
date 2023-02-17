@@ -86,7 +86,12 @@ define([
          * @returns {String}
          */
         getCountry: function () {
-            return quote.billingAddress().countryId;
+            //return quote.billingAddress().countryId;
+            if(quote.billingAddress()) {
+                return quote.billingAddress().countryId;
+            } else if (quote.shippingAddress()) {
+                return quote.shippingAddress().countryId;
+            }
         },
 
         /**
